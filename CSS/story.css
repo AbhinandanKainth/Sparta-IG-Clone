@@ -1,0 +1,65 @@
+/* story */
+
+.story {
+    width: 500px;
+    height: 120px;
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+
+    border:transparent;
+
+    border-radius: 12px;
+    border: 1px solid rgb(239, 239, 239);
+
+}
+
+.story>div {
+    font-size: 8px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-1 {
+    display: flex;
+    flex-direction: row;
+
+    width: 500px;
+    height: 300px;
+    margin-top: 20px;
+
+    border:transparent;
+    overflow: hidden;   
+}
+
+.story div img {
+
+    justify-content: space-between;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 100%;
+    margin-right: 13px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    /* the codes for maintaining its aspect ratio  */
+    object-fit: cover;
+
+   /* the border of story */
+    border: 3px solid transparent;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(to right, rgb(255, 208, 0) 0%, rgb(225, 19, 0) 50%, rgb(255, 0, 225));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+
+}
+

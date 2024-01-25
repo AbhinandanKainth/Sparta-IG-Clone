@@ -1,0 +1,61 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+a {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* wrapping the whole divs in a feed*/
+.wrap {
+    width: 100%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* @media screen and (max-width: 390px) {
+
+} */
+
+/* i phone pro 12 */
+@media screen and (max-width: 500px) {
+    .gnb{
+        width: 100%;
+    }
+    .gnb>.contents {
+        width: 90%;
+    }
+    .contents img {
+        width: 95px;
+        margin-right: 10px
+    }
+    .contents>input {
+        width: 100px;
+    }
+    .contents div:last-child {
+        font-size:20px;
+    }
+    .contents div >i {
+        margin: 0 4px;
+    }
+    
+    .wrap {
+        width: 100%;
+    }
+    .story {
+        width: 100%;
+    }
+
+}

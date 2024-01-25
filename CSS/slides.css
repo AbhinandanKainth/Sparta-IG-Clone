@@ -1,0 +1,103 @@
+
+*{
+    margin: 0;
+    padding: 0;
+  }
+
+  .slides {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* set the width and height of pictures */
+  #slideShow {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    object-fit: cover;
+    overflow: hidden;   
+
+    justify-content: center;
+  }
+  
+  
+  .slides{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: left 0.5s ease-out; 
+  }
+  
+  
+  /* arrange slides in a row*/
+  .slides li:not(:last-child){
+    float: left;
+    margin-right: 100px;
+  }
+  
+  .slides li{
+    float: left;
+  }
+  
+  .controller span{
+    position:absolute;
+    background-color: transparent;
+    color: black;
+    text-align: center;
+    border-radius: 50%;
+    padding: 10px 20px;
+    top: 50%;
+    font-size: 1.3em;
+    cursor: pointer;
+  }
+  
+  /* when the cursor is on the next and prev button */
+  .controller span:hover{
+    background-color: rgba(128, 128, 128, 0.11);
+  }
+  
+  .prev{
+    left: 10px;
+  }
+  
+   /* when the cursor is on the prev button, it slightly moves to the left side.*/
+  .prev:hover{
+    transform: translateX(-10px);
+  }
+  
+  .next{
+    right: 10px;
+  }
+  
+  /* when the cursor is on the next button, it slightly moves to the right side.*/
+  .next:hover{
+    transform: translateX(10px);
+  }
+
+  .slide_button {
+    /* layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    /* position */
+    position: absolute;
+    /* to make the button in the middle of the screen */
+    top: calc(50% - 16px);
+  
+    /* size */
+    width: 32px;
+    height: 32px;
+  
+    /* style */
+    border-radius: 100%;
+    background-color: #cccc;
+    cursor: pointer;
+  }
+  
+  .slide_prev_button {
+    left: 10px;
+  }
+  .slide_next_button {
+    right: 10px;
+  }

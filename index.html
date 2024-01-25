@@ -1,11 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title> LXI - INSTAGRAM </title>
+    
+    <link rel="stylesheet" href="./CSS/gnb.css">
+    <link rel="stylesheet" href="./CSS/story.css">
+    <link rel="stylesheet" href="./CSS/layout.css">
+    <link rel="stylesheet" href="./CSS/slides.css">
+    <link rel="stylesheet" href="./CSS/feed.css">
+    
 </head>
+
+<script>
+    function search() {
+        let searchWord = $("#searchInput").val();
+        // you can get the value of the inputbox 
+        let link = `https://www.instagram.com/explore/tags/${searchWord}`
+        //the url with seachword
+        if (window.event.key == 'Enter') {
+            location.href = link;
+        }
+    }
+
+    function onDocumentLoad() {
+        renderStory();
+    }
+
+    $( document ).ready(function() {
+        onDocumentLoad();
+    });
+    
+</script>
 <body>
-    My first web page.
+    <div class="gnb">
+        <div class="contents">
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKlpev0yAyZdqM4sjJA7yoL_r_SpHKuWoOcg&usqp=CAU">
+            </div>
+            <input class="form-control form-control-sm" id="searchInput" type="text" placeholder="Search"
+            onfocus="this.placeholder=''" onblur="this.placeholder='Search'" name="search"
+            aria-label=".form-control-sm example" onkeypress="search()">
+            <div>
+                <i class="bi bi-house-door-fill"></i>
+                <i class="bi bi-cursor"></i>
+                <i class="bi bi-plus-square"></i>
+                <i class="bi bi-compass"></i>
+                <i class="bi bi-suit-heart"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap">
+        <!-- storys -->
+        <div class="story"  id="story">
+            <div class="story-1" id="story-1">
+                <div class="storyImg storyImg-1"></div>
+                <div class="storyImg storyImg-2"></div>
+                <div class="storyImg storyImg-3"></div>
+                <div class="storyImg storyImg-4"></div>
+                <div class="storyImg storyImg-5"></div>
+                <div class="storyImg storyImg-6"></div>
+                <div class="storyImg storyImg-7"></div>
+                <div class="storyImg storyImg-8"></div>
+                <div class="storyImg storyImg-9"></div>
+                <div class="storyImg storyImg-9"></div>
+            </div>
+            <div class="slide_prev_button slide_button">◀</div>
+            <div class="slide_next_button slide_button">▶</div>
+        </div>
+        <div class="content">
+            <div class="feedUser">
+                <img src="http://www.naewoeilbo.com/news/photo/202110/414285_189601_940.png">
+                <span>AMILY_99</span>
+                <i class="bi bi-three-dots"></i>
+            </div>
+
+            <!-- Bootstrap Card -->
+            <div class="card">
+                <!-- This is the image -->
+                <img src="https://www.sputnik.kr/article_img/202009/article_1601089284.jpg"
+                    class="card-img-top" alt="...">
+
+                
+                <!-- Now let's see the card body -->
+                <!-- We have some icons -->
+                <!-- We have captions -->
+                <!-- We have a text box -->
+                <div class="card-body">
+                    
+                    <div class="icons">
+                        <!-- Heart icon -->
+                        <i class="bi bi-suit-heart "></i>
+                        <!-- Chat icon -->
+                        <i class="bi bi-chat"></i>
+
+                        <a href="#" id="sns_urlCoby" class="btn_share_sns" title="새창" onclick="clip(); return false;">
+                            <i class="bi bi-send"></i></a>
+                        
+                        <!-- Bookmark icons -->
+                        <i class="bi bi-bookmark"></i>
+                    </div>
+
+                    
+                    <!-- Captions and like stats, etc -->
+                    <p class="card-text">544 likes</p>
+                    <span class="user">AMILY_99</span>
+                    <span id="captionFirst" class="caption">
+                        Being with you is always..
+                    </span>
+                    <!-- For read more button, just implement this readMoreFirst() -->
+                    <!-- It will change the caption text -->
+                    <a class="btn-more" id="btn-1" onclick="readMoreFirst()">Read more</a>
+                    <ul id="firstComment">
+                    </ul>
+
+                    <!-- Comment Box/ Input box -->
+                    <div class="comment">
+                        <!-- Smilie emoji -->
+                        <i class="bi bi-emoji-smile" id="smail-1"></i>
+
+                        <!-- Input Box -->
+                        <input class="form-control form-control-sm" id="commentFirstInput" type="text"
+                            placeholder="Add a comment" aria-label=".form-control-sm example">
+
+                        <!-- Post button -->
+                        <button onclick="postFirstComment()">Post</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content">
+            <div class="feedUser">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQheTU3WJeKEHtPfoMq73mRMP6UHmxg6qdC0w&usqp=CAU">
+                <span>Messy_teria</span>
+                <i class="bi bi-three-dots"></i>
+            </div>
+            <div class="card">
+                <img src="https://phantom-marca.unidadeditorial.es/91b17d9b58d4e32dab8f04dee6bd7cd6/resize/1320/f/jpg/assets/multimedia/imagenes/2022/02/08/16443093703854.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <div class="icons">
+                        <i class="bi bi-suit-heart "></i>
+                        <i class="bi bi-chat"></i>
+                        <a href="#" id="sns_urlCoby" class="btn_share_sns" title="새창" onclick="clip(); return false;">
+                            <i class="bi bi-send"></i></a>
+                        <i class="bi bi-bookmark"></i>
+                    </div>
+                    <p class="card-text">67 likes</p>
+                    <span class="user">green_teria</span>
+                    <span id="captionSecond" class="caption">
+                        No sweat, No sweet
+                    </span>
+                    <a class="btn-more" id="btn-2" onclick="readMoreSecond()">Read more</a>
+                    <ul id="secondComment">
+                    </ul>
+                    <div class="comment">
+                        <i class="bi bi-emoji-smile" id="smail-2"></i>
+                        <input class="form-control form-control-sm" id="commentSecondInput" type="text"
+                            placeholder="Add a comment" aria-label=".form-control-sm example">
+                        <button onclick="postSecondComment()">Post</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="./JS/story.js"></script>
+<script src="./JS/icons.js"></script>
+<script src="./JS/storySlide.js"></script>
 </html>

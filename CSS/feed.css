@@ -1,0 +1,168 @@
+/*each feed css*/
+.content {
+    width: 500px;
+    margin: 20px auto;
+
+    /* It is flex box, and I'll populate my post div in a column wise fashion */
+    display: flex;
+    flex-direction: column;
+
+    /* I want all of them to be center aligned */
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+    /* RGB: Red Green Blue */
+    /* Min value: 0, Max value: 255 */
+    /* 8 bit representation  */
+    border: 1px solid rgba(229, 229, 229);
+
+}
+
+/* user info  */
+.feedUser {
+    width: 500px;
+    height: 60px;
+
+    padding: 18px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* user Id css */
+/* Profile photo styling */
+.feedUser>img {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 100%;
+    margin-right: 10px;
+
+    object-fit: cover;
+}
+
+/* user Id css */
+/* Username styling */
+.feedUser>span {
+    margin-right: auto;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* three dots css */
+.feedUser>i {
+    font-size: 18px;
+}
+
+/* the info under the profile  */
+.card {
+    width: 500px;
+    border-radius: 12px;
+    border: 1px solid rgb(239, 239, 239);
+}
+
+/* feed image */
+.card>img {
+    height: 500px;
+    object-fit: cover;
+
+    /* background-position: center; */
+}
+
+/* icons */
+.card-body>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+
+.card-body>div>.bi-suit-heart {
+    margin-right: 12px;
+    color: crimson;
+}
+
+.card-body>div>.bi-suit-heart-fill {
+    margin-right: 12px;
+    color: crimson;
+
+}
+
+.card-body>div>.bi-chat {
+    margin-right: 12px;
+}
+
+.card-body>div>.bi-send {
+    margin-right: auto;
+}
+
+#sns_urlCoby {
+    color: black;
+    margin-right: auto;
+}
+
+.card-body>div>.bi-bookmark {
+    color: black;
+}
+
+.card-body>div>.bi-bookmark-fill {
+    color: black;
+}
+
+.card-text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* the userId in the card  */
+.user {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.feedCaption a {
+    font-size: 5px;
+}
+
+.btn-more {
+    display: inline;
+    cursor: pointer;
+    color: #777;
+    margin-left: 3px;
+}
+
+/* comment */
+.card-body div>input {
+    border: none;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.comment>i {
+    margin-top: 9px;
+    margin-right: 10px
+}
+
+.card-body div>button {
+    font-size: 15px;
+    color: rgb(136, 136, 220);
+
+    margin-top: 9px;
+    padding: 8px;
+
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
